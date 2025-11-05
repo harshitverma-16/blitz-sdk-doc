@@ -1,0 +1,39 @@
+site_name: Blitz SDK Documentation
+
+theme:
+  name: material
+  favicon: favicon.ico
+  logo: icon.png
+  features:
+    - navigation.expand
+    - content.code.copy
+    - navigation.sections
+    - navigation.tracking
+    - toc.integrate
+
+  copyright: "this is copyright"
+
+extra_css:
+  - css/custom.css
+  
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Blitz SDK and Libraries: index.md
+  # - Classes:
+  #     - AuthClient:
+  #         - __init__: '__init1__'
+  #         - get_access_token: 'get_access_token'
+  #     - MarketDataClient:
+  #         - __init__: '__init2__'
+  #         - on_connect: 'on_connect'
+  #         - on_close: 'on_close'
+  #         - get_ltp: 'get_ltp'
+  #         - get_option_chain: 'get_option_chain'
+  #         - get_quote: 'get_quote'
+  #         - subscribe_market_data: 'subscribe_market_data'
+  #         - unsubscribe_market_data: 'unsubscribe_market_data'
+  #         - get_historical_data: 'get_historical_data'
