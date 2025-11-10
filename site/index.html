@@ -1,0 +1,1034 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Blitz SDK Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#blitz-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Blitz SDK Documentation" class="md-header__button md-logo" aria-label="Blitz SDK Documentation" data-md-component="logo">
+      
+  <img src="icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Blitz SDK Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Blitz SDK and Libraries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Blitz SDK Documentation" class="md-nav__button md-logo" aria-label="Blitz SDK Documentation" data-md-component="logo">
+      
+  <img src="icon.png" alt="logo">
+
+    </a>
+    Blitz SDK Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Blitz SDK and Libraries
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blitz SDK and Libraries
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      The library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_access_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_access_token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init___1" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      on_connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_close" class="md-nav__link">
+    <span class="md-ellipsis">
+      on_close
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_ltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_ltp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_option_chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_option_chain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_quote" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_quote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect_ws" class="md-nav__link">
+    <span class="md-ellipsis">
+      connect_ws
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop_websocket
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe_market_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      subscribe_market_data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsubscribe_market_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      unsubscribe_market_data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_historical_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_historical_data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="blitz-module"><strong>Blitz</strong> module</h1>
+<p>Blitz SDK for Python. <br />
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">blitzSDK</span>
+</code></pre></div></p>
+<h2 id="the-library"><strong>The library</strong></h2>
+<p>Blitz provides a comprehensive set of APIs for building trading and investment applications. With Blitz, you can place orders instantly, monitor portfolios, access live market data through WebSockets, and leverage a variety of trading features using a simple, unified HTTP interface.</p>
+<h2 id="getting-started"><strong>Getting started</strong></h2>
+<pre><code>from blitzSDK import AuthClient, MarketDataClient
+
+# Step 1: Authenticate
+auth_client = AuthClient(app_key="your_app_key_here", user_id="USER123")
+
+# Step 2: Generate Access Token
+access_token = auth_client.get_access_token()
+print("Access Token:", access_token)
+
+# Step 3: Initialize Market Data Client
+market_client = MarketDataClient(app_key="your_app_key_here", user_id="USER123")
+
+# Step 4: Fetch LTP for instruments
+ltp_data = market_client.get_ltp(["NSE:RELIANCE", "NSE:TCS"])
+print("LTP Data:", ltp_data)
+</code></pre>
+<p><strong>Output</strong>
+<div class="highlight"><pre><span></span><code><span class="n">Access</span> <span class="n">Token</span><span class="p">:</span> <span class="n">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span><span class="o">...</span>
+<span class="n">LTP</span> <span class="n">Data</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;NSE:RELIANCE&#39;</span><span class="p">:</span> <span class="mf">2448.25</span><span class="p">,</span> <span class="s1">&#39;NSE:TCS&#39;</span><span class="p">:</span> <span class="mf">3575.10</span><span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="class"><strong>Class</strong></h2>
+<div class="highlight"><pre><span></span><code>class AuthClient
+</code></pre></div>
+<h2 id="methods"><strong>Methods</strong></h2>
+<h3 id="__init__"><strong><code>__init__</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def __init__(self, app_key: str, user_id: str)
+</code></pre></div>
+<details class="info">
+<summary>Source code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">app_key</span> <span class="o">=</span> <span class="n">app_key</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">user_id</span> <span class="o">=</span> <span class="n">user_id</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">auth_base_url</span> <span class="o">=</span> <span class="s2">&quot;http://182.70.127.254:44347&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+</details>
+<p>Authentication of the client.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app_key</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Unique key provided to the client for API authentication.</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Unique identifier of the client or account used for login.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">auth</span> <span class="o">=</span> <span class="n">AuthClient</span><span class="p">(</span><span class="n">app_key</span><span class="o">=</span><span class="s2">&quot;abc123xyz&quot;</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;U12345&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h3 id="get_access_token"><strong><code>get_access_token</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def get_access_token(self):
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_access_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the access token, logging in if necessary.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_app_login</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
+</code></pre></div>
+</details>
+<p>Return the access token of the client</p>
+<hr />
+<h2 id="class_1"><strong>Class</strong></h2>
+<div class="highlight"><pre><span></span><code>class MarketDataClient
+</code></pre></div>
+<p>The <code>MarketDataClient</code> class provides access to <strong>live</strong> and <strong>historical market data</strong> through REST and WebSocket APIs.<br />
+It manages authentication, connection setup, and streaming of real-time tick data.</p>
+<hr />
+<h2 id="methods_1"><strong>Methods</strong></h2>
+<h3 id="__init___1"><strong><code>__init__</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def __init__(self, app_key: str, user_id: str)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">app_key</span> <span class="o">=</span> <span class="n">app_key</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">user_id</span> <span class="o">=</span> <span class="n">user_id</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">api_base_url</span> <span class="o">=</span> <span class="s2">&quot;http://182.70.127.254:11022/api&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">api_hist_base_url</span> <span class="o">=</span> <span class="s2">&quot;http://14.99.227.18:11025/md-api/&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">auth_client</span> <span class="o">=</span> <span class="n">AuthClient</span><span class="p">(</span><span class="n">app_key</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_logged_in</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span> <span class="o">=</span> <span class="n">MarketDataWebSocketClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">access_token</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="o">.</span><span class="n">set_on_connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_connect</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="o">.</span><span class="n">set_on_close</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_close</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_on_tick</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+</details>
+<p>Initializes a new instance of the <code>MarketDataClient</code> class.<br />
+This client is responsible for connecting to live and historical market data endpoints and managing WebSocket communication for real-time updates.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app_key</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Unique application key provided to the client during registration. Used for API authentication.</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Unique user identifier assigned by the broker or platform. Used to link API calls to a specific client account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">auth</span> <span class="o">=</span> <span class="n">MarketDataClient</span><span class="p">(</span><span class="n">app_key</span><span class="o">=</span><span class="s2">&quot;abc123xyz&quot;</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;U12345&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h3 id="on_connect"><strong><code>on_connect</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def on_connect(self)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">on_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Callback when WebSocket connects.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;WebSocket connected successfully.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Confirmation when the websocket is connected.</p>
+<hr />
+<h3 id="on_close"><strong><code>on_close</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def on_close(self)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">on_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">close_status_code</span><span class="p">,</span> <span class="n">close_msg</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Callback when WebSocket closes.&quot;&quot;&quot;</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WebSocket closed: </span><span class="si">{</span><span class="n">close_status_code</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">close_msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Callback when websocket closes</p>
+<hr />
+<h3 id="get_ltp"><strong><code>get_ltp</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def get_ltp(self, instrument_ids)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_ltp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument_ids</span><span class="p">):</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;InstrumentIds&quot;</span><span class="p">:</span> <span class="n">instrument_ids</span><span class="p">}</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="s2">&quot;/marketfeed/ltp&quot;</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Fetches the <strong>Last Traded Price (LTP)</strong> for one or more instruments from the market data API.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument_ids</code></td>
+<td><code>list</code> or <code>array</code></td>
+<td>Yes</td>
+<td>A list of instrument IDs (symbols or tokens) for which the last traded price is to be fetched.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Get LTP for multiple instruments</span>
+<span class="n">ltp_data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_ltp</span><span class="p">([</span><span class="s2">&quot;NSE:INFY&quot;</span><span class="p">,</span> <span class="s2">&quot;NSE:TCS&quot;</span><span class="p">,</span> <span class="s2">&quot;NSE:RELIANCE&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ltp_data</span><span class="p">)</span>
+<span class="c1"># Example Response:</span>
+<span class="c1"># {</span>
+<span class="c1">#   &quot;NSE:INFY&quot;: 1620.50,</span>
+<span class="c1">#   &quot;NSE:TCS&quot;: 3575.10,</span>
+<span class="c1">#   &quot;NSE:RELIANCE&quot;: 2448.25</span>
+<span class="c1"># }</span>
+</code></pre></div>
+<hr />
+<h3 id="get_option_chain"><strong><code>get_option_chain</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def get_option_chain(self, symbol, expiry_date)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_option_chain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">expiry_date</span><span class="p">):</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="n">symbol</span><span class="p">,</span> <span class="s2">&quot;expiryDate&quot;</span><span class="p">:</span> <span class="n">expiry_date</span><span class="p">}</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="s2">&quot;/marketfeed/optionChain&quot;</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Retrieves the <strong>Option Chain</strong> data for a given underlying symbol and expiry date.<br />
+This includes all available strike prices along with their corresponding call (CE) and put (PE) option details.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>symbol</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The underlying asset symbol (e.g., <code>NIFTY</code>, <code>BANKNIFTY</code>, or an equity symbol).</td>
+</tr>
+<tr>
+<td><code>expiry_date</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Expiry date of the options contract in <code>YYYY-MM-DD</code> format.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Get Option Chain for NIFTY</span>
+<span class="n">option_chain</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_option_chain</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="s2">&quot;NIFTY&quot;</span><span class="p">,</span> <span class="n">expiry_date</span><span class="o">=</span><span class="s2">&quot;2025-10-31&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">option_chain</span><span class="p">)</span>
+<span class="c1"># Example Response:</span>
+<span class="c1"># {</span>
+<span class="c1">#   &quot;symbol&quot;: &quot;NIFTY&quot;,</span>
+<span class="c1">#   &quot;expiryDate&quot;: &quot;2025-10-31&quot;,</span>
+<span class="c1">#   &quot;data&quot;: [</span>
+<span class="c1">#       {</span>
+<span class="c1">#           &quot;strikePrice&quot;: 20000,</span>
+<span class="c1">#           &quot;CE&quot;: {</span>
+<span class="c1">#               &quot;ltp&quot;: 120.5,</span>
+<span class="c1">#               &quot;bid&quot;: 119.8,</span>
+<span class="c1">#               &quot;ask&quot;: 121.0,</span>
+<span class="c1">#               &quot;volume&quot;: 5400,</span>
+<span class="c1">#               &quot;openInterest&quot;: 152300</span>
+<span class="c1">#           },</span>
+<span class="c1">#           &quot;PE&quot;: {</span>
+<span class="c1">#               &quot;ltp&quot;: 95.3,</span>
+<span class="c1">#               &quot;bid&quot;: 94.8,</span>
+<span class="c1">#               &quot;ask&quot;: 95.6,</span>
+<span class="c1">#               &quot;volume&quot;: 4600,</span>
+<span class="c1">#               &quot;openInterest&quot;: 138200</span>
+<span class="c1">#           }</span>
+<span class="c1">#       },</span>
+<span class="c1">#       ...</span>
+<span class="c1">#   ]</span>
+<span class="c1"># }</span>
+</code></pre></div>
+<hr />
+<h3 id="get_quote"><strong><code>get_quote</code></strong></h3>
+<p><div class="highlight"><pre><span></span><code>def get_quote(self, instrument_ids)
+</code></pre></div>
+Retrieves <strong>detailed market quotes</strong> for one or more instruments.<br />
+This method provides complete quote information — including last traded price, volume, and other key market data fields.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument_ids</code></td>
+<td><code>list</code> or <code>array</code></td>
+<td>Yes</td>
+<td>A list of instrument IDs (symbols or tokens) for which the full market quote is to be fetched.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Get full quote details for instruments</span>
+<span class="n">quote_data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_quote</span><span class="p">([</span><span class="s2">&quot;NSE:TCS&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">quote_data</span><span class="p">)</span>
+<span class="c1"># Example Response:</span>
+<span class="c1"># {</span>
+<span class="c1">#   &quot;NSE:TCS&quot;: {</span>
+<span class="c1">#       &quot;ltp&quot;: 3575.1,</span>
+<span class="c1">#       &quot;bid&quot;: 3574.5,</span>
+<span class="c1">#       &quot;ask&quot;: 3576.2,</span>
+<span class="c1">#       &quot;volume&quot;: 182300,</span>
+<span class="c1">#       &quot;open&quot;: 3550.0,</span>
+<span class="c1">#       &quot;high&quot;: 3588.0,</span>
+<span class="c1">#       &quot;low&quot;: 3540.0,</span>
+<span class="c1">#       &quot;close&quot;: 3560.0</span>
+<span class="c1">#   }</span>
+<span class="c1"># }</span>
+</code></pre></div>
+<hr />
+<h3 id="connect_ws"><strong><code>connect_ws</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def connect_ws(self)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">connect_ws</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start WebSocket if not already connected.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_connected</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;WebSocket already connected.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<ul>
+<li>Start the websocket if not started.</li>
+</ul>
+<hr />
+<h3 id="stop_websocket"><strong><code>Stop_websocket</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def stop_websocket(self)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">stop_websocket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Stop the WebSocket connection.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;WebSocket stopped.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<ul>
+<li>Stop the websocket connection</li>
+</ul>
+<hr />
+<h3 id="subscribe_market_data"><strong><code>subscribe_market_data</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def subscribe_market_data(self, instrument_ids)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">subscribe_market_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument_ids</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Subscribe to live market data.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</details>
+<p>Subscribes to <strong>live market data</strong> for one or more instruments through a WebSocket connection.<br />
+Once subscribed, the client will start receiving <strong>real-time tick updates</strong> for the specified instruments.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument_ids</code></td>
+<td><code>list</code> or <code>array</code></td>
+<td>Yes</td>
+<td>A list of instrument IDs (symbols or tokens) to subscribe to for live market data updates.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Subscribe to live market data</span>
+<span class="n">client</span><span class="o">.</span><span class="n">subscribe_market_data</span><span class="p">([</span><span class="s2">&quot;NSE:RELIANCE&quot;</span><span class="p">,</span> <span class="s2">&quot;NSE:TCS&quot;</span><span class="p">,</span> <span class="s2">&quot;NSE:INFY&quot;</span><span class="p">])</span>
+</code></pre></div>
+<hr />
+<h3 id="unsubscribe_market_data"><strong><code>unsubscribe_market_data</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def unsubscribe_market_data(self, instrument_ids)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">unsubscribe_market_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument_ids</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Unsubscribe from market data through WebSocket.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_connected</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ws_client</span><span class="o">.</span><span class="n">unsubscribe</span><span class="p">(</span><span class="n">instrument_ids</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsubscribed from instrument IDs: </span><span class="si">{</span><span class="n">instrument_ids</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;WebSocket is not connected. Cannot unsubscribe.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Unsubscribes from <strong>live market data</strong> for one or more instruments through the active WebSocket connection.<br />
+Once unsubscribed, the client will <strong>stop receiving tick updates</strong> for the specified instruments.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument_ids</code></td>
+<td><code>list</code> or <code>array</code></td>
+<td>Yes</td>
+<td>A list of instrument IDs (symbols or tokens) to unsubscribe to for live market data updates.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Unubscribe to live market data</span>
+<span class="n">client</span><span class="o">.</span><span class="n">unsubscribe_market_data</span><span class="p">([</span><span class="s2">&quot;NSE:RELIANCE&quot;</span><span class="p">,</span> <span class="s2">&quot;NSE:TCS&quot;</span><span class="p">,</span> <span class="s2">&quot;NSE:INFY&quot;</span><span class="p">])</span>
+</code></pre></div>
+<hr />
+<h3 id="get_historical_data"><strong><code>get_historical_data</code></strong></h3>
+<div class="highlight"><pre><span></span><code>def get_historical_data(self, instrument: str, from_date: str, to_date: str)
+</code></pre></div>
+<details class="info">
+<summary>Source Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_historical_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument</span><span class="p">,</span> <span class="n">from_date</span><span class="p">,</span> <span class="n">to_date</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetch historical market data for a specific instrument and date range.&quot;&quot;&quot;</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="n">instrument</span><span class="p">,</span>
+        <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="n">from_date</span><span class="p">,</span>
+        <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="n">to_date</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="s2">&quot;/marketfeed/historicalData&quot;</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Fetches <strong>historical market data</strong> (OHLC – Open, High, Low, Close) for a specific instrument over a given date range.<br />
+This method is useful for backtesting, analytics, and visualizing past market trends.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The instrument ID or symbol for which historical data is to be fetched.</td>
+</tr>
+<tr>
+<td><code>from_date</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Start date of the historical data range in <code>YYYY-MM-DD</code> format.</td>
+</tr>
+<tr>
+<td><code>to_date</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>End date of the historical data range in <code>YYYY-MM-DD</code> format.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Fetch historical data for RELIANCE</span>
+<span class="n">historical_data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_historical_data</span><span class="p">(</span>
+    <span class="n">instrument</span><span class="o">=</span><span class="s2">&quot;NSE:RELIANCE&quot;</span><span class="p">,</span>
+    <span class="n">from_date</span><span class="o">=</span><span class="s2">&quot;2025-09-01&quot;</span><span class="p">,</span>
+    <span class="n">to_date</span><span class="o">=</span><span class="s2">&quot;2025-09-15&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">historical_data</span><span class="p">)</span>
+<span class="c1"># Example Response:</span>
+<span class="c1"># {</span>
+<span class="c1">#   &quot;instrument&quot;: &quot;NSE:RELIANCE&quot;,</span>
+<span class="c1">#   &quot;data&quot;: [</span>
+<span class="c1">#       {</span>
+<span class="c1">#           &quot;date&quot;: &quot;2025-09-01&quot;,</span>
+<span class="c1">#           &quot;open&quot;: 2450.0,</span>
+<span class="c1">#           &quot;high&quot;: 2470.0,</span>
+<span class="c1">#           &quot;low&quot;: 2435.0,</span>
+<span class="c1">#           &quot;close&quot;: 2462.5,</span>
+<span class="c1">#           &quot;volume&quot;: 1250000</span>
+<span class="c1">#       },</span>
+<span class="c1">#       {</span>
+<span class="c1">#           &quot;date&quot;: &quot;2025-09-02&quot;,</span>
+<span class="c1">#           &quot;open&quot;: 2463.0,</span>
+<span class="c1">#           &quot;high&quot;: 2488.0,</span>
+<span class="c1">#           &quot;low&quot;: 2450.5,</span>
+<span class="c1">#           &quot;close&quot;: 2475.8,</span>
+<span class="c1">#           &quot;volume&quot;: 1178000</span>
+<span class="c1">#       },</span>
+<span class="c1">#       ...</span>
+<span class="c1">#   ]</span>
+<span class="c1"># }</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "content.code.copy", "navigation.sections", "navigation.tracking", "toc.integrate"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
