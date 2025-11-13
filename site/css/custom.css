@@ -1,7 +1,8 @@
 
 /* Optional: add border or padding to make it more noticeable */
-h3 {
+h4 {
   border-left: 4px solid #003063;
   padding-left: 8px;
   font-weight: 600;
+  font-size: 22px;
 }
